@@ -35,17 +35,4 @@ public:
     virtual vector<double> Delta(vector<double> Strk)=0;
 };
 
-template <class T>
-void print(const std::vector<T>& myList)
-{
-    std::cout << std::endl << "Size of vector is " << myList.size() << "\n[";
-    // We must use a const iterator here, otherwise we get a compiler error.
-    typename vector<T>::const_iterator i;
-    for (i = myList.begin(); i != myList.end(); ++i)
-    {
-        std::cout << *i << ",";
-    }
-    std::cout << "]\n";
-}
-
 #endif //OPTIONEXACTPRICING_OPTIONS_H

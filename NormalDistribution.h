@@ -14,7 +14,6 @@ class NormalGenerator
 {
 
 public:
-
     // Empty at the moment
     virtual double getNormal() const = 0;
 };

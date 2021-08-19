@@ -9,6 +9,10 @@
 #include "NormalDistribution.h"
 
 class path{
+private:
+    double drift(double X) const;
+    double diffusion(double X) const;
+    double diffusionDerivative(double X) const;
 protected:
     OptionParameter option;
 public:
@@ -16,12 +20,6 @@ public:
     path(const path& source):pathVec(source.pathVec), option(source.option){};
     path(const OptionParameter& source):option(source){};
     vector<vector<double>> pathSimulation(int NumOfSteps, int times);
-
-private:
-    double drift(double X) const;
-    double diffusion(double X) const;
-    double diffusionDerivative(double X) const;
-
 };
 
 

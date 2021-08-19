@@ -14,7 +14,6 @@ class EuroOption: public Options{
 protected:
     double PricingCall(double Strk);
     double PricingPut(double Strk);
-
     double DeltaPut(double Strk);
     double DeltaCall(double Strk);
 

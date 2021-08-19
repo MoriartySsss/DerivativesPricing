@@ -10,6 +10,9 @@
 using namespace std;
 
 class AmeOption: public Options {
+private:
+    double PricingCall(double Strk);
+    double PricingPut(double Strk);
 public:
     AmeOption();
     AmeOption(const AmeOption& source);
@@ -30,10 +33,6 @@ public:
     };// will add delta of American option later
 
     virtual void toggle();
-
-private:
-    double PricingCall(double Strk);
-    double PricingPut(double Strk);
 };
 
 
