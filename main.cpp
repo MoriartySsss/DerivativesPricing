@@ -106,10 +106,9 @@ void sampleTest(){
 
 
     cout << "##########################" << endl;
-    path MC1(test1);
+    path MC1(test3);
     cout << "lets price a put European option" << endl;
-    print(test1);
-    cout << "The Strike price is " << 65 << endl;
+    print(test3);
     int NOS;
     cout << "the number of steps?" << endl;
     cin >> NOS;
@@ -117,7 +116,7 @@ void sampleTest(){
     cout << "the number of simulations?" << endl;
     cin >> NOSim;
     MC1.pathSimulation(NOS, NOSim);
-    vector<double> MCResVec = T1.payOffVec(65,MC1.pathVec);
+    vector<double> MCResVec = T3.payOffVec(10,MC1.pathVec);
     double MCResult = ave(MCResVec);
     cout << MCResult << endl;
 

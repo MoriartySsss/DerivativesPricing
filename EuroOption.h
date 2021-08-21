@@ -7,6 +7,7 @@
 
 #include "Options.h"
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
@@ -60,7 +61,7 @@ public:
                 tmp = max(ST - Strk, 0.0);
                 break;
         }
-        return tmp;
+        return (tmp*exp((-1)*option.r*option.T));
     }
 
     vector<double> payOffVec(double Strk, vector<double> ST);
